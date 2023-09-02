@@ -1,0 +1,67 @@
+<%-include('header')-%>
+
+<div>
+    <section class="mainNavBar">
+        <div class="container-fluid headerNavbar py-3">
+                <nav class="navbar navbar-expand-md navbar-light d-flex headerNavbar ">
+                    <!-- Logo  -->
+                    <div class="ms-5">
+                        <a href="" class="text-uppercase text-decoration-none text-dark"><h1>Logo</h1></a>
+                    </div>
+                      <!-- toggler -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false"aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon my-toggler"></span>
+                    </button>
+                    <div class="collapse navbar-collapse w-50 ps-5" id="navbarTogglerDemo03">
+                        <ul class="navbar-nav mx-auto ps-5">
+                            <li class="nav-item">
+                                <a href="" class="nav-link active text-white fw-normal">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="" class="nav-link active text-white fw-normal ">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="" class="nav-link active text-white fw-normal ">Services</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="" class="nav-link active text-white fw-normal">Contact</a>
+                            </li> 
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="nav-link active text-white fw-normal pt-3">welcome :</p> 
+                    </div>
+                    <div>
+                        <p class="nav-link active text-white fw-normal pe-3 pt-3"><%=locals.user?user:"user"%></p>               
+                    </div>
+                    <div>
+                        <a href="/route/logout"><button type="button " class="btn btn-dark rounded-pill loginButton me-5">Logout</button></a>
+                    </div>
+                </nav>
+        </div>
+        <div class="d-flex justify-content-center">
+            <hr class=" hr-blurry pb-5  border-5" />
+        </div>
+    </section>
+    <section>
+
+        <div class="container">
+            <div>
+                <div class="card-deck row">
+                    <% cards.forEach((card) => { %>
+                      <div class="card col-md-4 col-sm-6  bodycards ">
+                        <img src="<%= card.image %>" class="card-img-top img-fluid cardimg" alt="<%= card.title %>">
+                        <div class="card-body card-desc text-start">
+                          <h5 class="card-title"><%= card.title %></h5>
+                          <p class="card-text"><%= card.description %></p>
+                        </div>
+                      </div>
+                    <% }) %>
+                  </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+
+<%-include('footer')-%>

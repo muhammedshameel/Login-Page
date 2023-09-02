@@ -1,0 +1,33 @@
+.gradient-custom {
+    /* fallback for old browsers */
+    background: #6a11cb;
+    background-repeat: no-repeat;
+    
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, rgb(106, 17, 203), rgba(37, 117, 252, 1));
+    
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, rgb(106, 17, 203), rgba(37, 117, 252, 1))
+    }
+    body{
+        background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1))
+    }
+
+    .bodycards{
+        background: transparent;
+        border: none;
+    }
+    .cardimg{
+        height: 50%;
+        width: 50%;
+    }
+    .card-desc{
+        color: #ffff;
+        
+    }
+    hr{
+        width: 95%;
+    }
+    .loginCard{
+        border-radius: 1rem 8rem
+    }
