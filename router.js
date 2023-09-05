@@ -37,7 +37,7 @@ const cards = [
 
 router.get('/dashboard',(req,res) => {
     if(req.session.user){
-        res.render('dashboard',{user:req.session.user,cards});
+        res.render('dashboard',{user:req.session.user , cards: cards});
     }else{
         res.render('base',{title:"Login Page",logout:"Current Session Expired please login back again"});
     }
